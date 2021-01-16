@@ -1,0 +1,34 @@
+{
+  "name": "get-cover-bookmarklet",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Bookmarklet to grab cover images from Instagram, SoundCloud, Mixcloud and YouTube",
+  "scripts": {
+    "build": "node ./bin/build.mjs",
+    "start": "chokidar \"src/*\" -c \"npm run build\"",
+    "test": "eslint"
+  },
+  "keywords": [],
+  "author": "Jan T. Sott",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "html-minifier-terser": "^5.1.1",
+    "terser": "^5.5.1"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-json": "^2.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
