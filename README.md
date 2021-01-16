@@ -7,7 +7,7 @@
 
 ## tl;dr
 
-[Get the bookmarklet here!](https://idleberg.github.io/-get-cover-bookmarklet/)
+[Get the bookmarklet here!](https://idleberg.github.io/get-cover-bookmarklet/)
 
 ## License
 
