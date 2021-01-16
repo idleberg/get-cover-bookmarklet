@@ -50,7 +50,7 @@ async function writeToClipboard(commandList) {
       await navigator.clipboard.writeText(commandList);
     } catch (err) {
       console.error(err);
-      alert('Copying to clipboard failed, see console for details');
+      window.alert('Copying to clipboard failed, see console for details');
 
       return;
     }
@@ -80,16 +80,16 @@ async function writeToClipboard(commandList) {
       break;
 
     default:
-      alert(`This bookmarklet does not support ${origin}`);
+      window.alert(`This bookmarklet does not support ${origin}`);
       return;
   }
 
   if (!coverImage) return;
 
   if (isFirefox) {
-    alert(coverImage);
+    window.alert(coverImage);
   } else {
     await writeToClipboard(coverImage);
-    alert(`Successfully copied cover image to clipboard`);
+    window.alert(`Successfully copied cover image to clipboard`);
   }
 })();
