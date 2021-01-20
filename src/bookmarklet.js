@@ -1,6 +1,7 @@
 const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 
 const validOrigins = {
+  bandcamp: 'https://bandcamp.com',
   instagram: 'https://instagram.com',
   mixcloud: 'https://mixcloud.com',
   soundcloud: 'https://soundcloud.com',
@@ -38,6 +39,13 @@ function getYoutubeImage() {
   return groups.id
     ? `http://i3.ytimg.com/vi/${groups.id}/maxresdefault.jpg`
     : null;
+}
+
+function getBandcampImage() {
+  const albumArt = document.querySelector('#tralbumArt .popupImage img');
+  const imageURL = albumArt.src.replace('_16.jpg', '_10.jpg');
+
+  return imageURL;
 }
 
 async function writeToClipboard(commandList) {
@@ -80,6 +88,11 @@ async function writeToClipboard(commandList) {
       break;
 
     default:
+      if (origin.endsWith('.bandcamp.com')) {
+        coverImage = getBandcampImage()
+        break;
+      }
+
       window.alert(`This bookmarklet does not support ${origin}`);
       return;
   }
