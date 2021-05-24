@@ -48,14 +48,14 @@ function getBandcampImage() {
   return imageURL;
 }
 
-async function writeToClipboard(commandList) {
+async function writeToClipboard(coverImage) {
   const result = await navigator.permissions.query({
     name: 'clipboard-write',
   });
 
   if (result.state == 'granted' || result.state == 'prompt') {
     try {
-      await navigator.clipboard.writeText(commandList);
+      await navigator.clipboard.writeText(coverImage);
     } catch (err) {
       console.error(err);
       window.alert('Copying to clipboard failed, see console for details');
