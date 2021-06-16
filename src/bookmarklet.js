@@ -1,5 +1,3 @@
-const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
-
 const validOrigins = {
   bandcamp: 'https://bandcamp.com',
   instagram: 'https://instagram.com',
@@ -49,19 +47,13 @@ function getBandcampImage() {
 }
 
 async function writeToClipboard(coverImage) {
-  const result = await navigator.permissions.query({
-    name: 'clipboard-write',
-  });
+  try {
+    await navigator.clipboard.writeText(coverImage);
+  } catch (err) {
+    console.error(err);
+    window.alert('Copying to clipboard failed, see console for details');
 
-  if (result.state == 'granted' || result.state == 'prompt') {
-    try {
-      await navigator.clipboard.writeText(coverImage);
-    } catch (err) {
-      console.error(err);
-      window.alert('Copying to clipboard failed, see console for details');
-
-      return;
-    }
+    return;
   }
 }
 
@@ -99,10 +91,6 @@ async function writeToClipboard(coverImage) {
 
   if (!coverImage) return;
 
-  if (isFirefox) {
-    window.alert(coverImage);
-  } else {
-    await writeToClipboard(coverImage);
-    window.alert(`Successfully copied cover image to clipboard`);
-  }
+  await writeToClipboard(coverImage);
+  window.alert(`Successfully copied cover image to clipboard`);
 })();
