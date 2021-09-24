@@ -58,6 +58,8 @@ async function writeToClipboard(coverImage) {
 }
 
 (async () => {
+  window.focus();
+
   const origin = window.location.origin.replace('//www.', '//');
   let coverImage = '';
 
