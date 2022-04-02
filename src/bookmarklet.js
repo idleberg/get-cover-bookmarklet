@@ -51,9 +51,8 @@ async function writeToClipboard(coverImage) {
     await navigator.clipboard.writeText(coverImage);
   } catch (err) {
     console.error(err);
-    window.alert('Copying to clipboard failed, see console for details');
-
-    return;
+  } finally {
+    window.open();
   }
 }
 
