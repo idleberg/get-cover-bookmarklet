@@ -51,8 +51,6 @@ async function writeToClipboard(coverImage) {
     await navigator.clipboard.writeText(coverImage);
   } catch (err) {
     console.error(err);
-  } finally {
-    window.open(coverImage);
   }
 }
 
@@ -93,5 +91,5 @@ async function writeToClipboard(coverImage) {
   if (!coverImage) return;
 
   await writeToClipboard(coverImage);
-  window.alert(`Successfully copied cover image to clipboard`);
+  window.open(coverImage);
 })();
