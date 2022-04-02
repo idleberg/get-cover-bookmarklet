@@ -52,7 +52,7 @@ async function writeToClipboard(coverImage) {
   } catch (err) {
     console.error(err);
   } finally {
-    window.open();
+    window.open(coverImage);
   }
 }
 
