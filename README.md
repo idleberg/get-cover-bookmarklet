@@ -2,7 +2,7 @@
 
 > Bookmarklet to grab cover images from Instagram, Bandcamp, SoundCloud, Mixcloud and YouTube
 
-[![github license](https://badgen.net/github/license/micromatch/micromatch)](https://opensource.org/licenses/MIT)
+[![github license](https://shields.io/github/license/idleberg/get-cover-bookmarklet?style=flat-square)](LICENSE)
 ![github pages](https://shields.io/github/workflow/status/idleberg/get-cover-bookmarklet/gh-pages?style=flat-square)
 
 ## tl;dr
@@ -11,4 +11,4 @@
 
 ## License
 
-This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
+This work is licensed under [The MIT License](LICENSE)
