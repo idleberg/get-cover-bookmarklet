@@ -41,7 +41,7 @@ function getYoutubeImage() {
 
 function getBandcampImage() {
   const albumArt = document.querySelector('#tralbumArt .popupImage img');
-  const imageURL = albumArt.src.replace('_16.jpg', '_10.jpg');
+  const imageURL = albumArt.src.replace('900x900/', '').replace('_16.jpg', '_10.jpg');
 
   return imageURL;
 }
