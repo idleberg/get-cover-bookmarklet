@@ -17,7 +17,7 @@ function getSoundcloudImage() {
 function getMixcloudImage() {
   const albumArt = document.querySelector('.album-art img');
   const lastImage = albumArt.srcset.split(',').pop();
-  const imageURL = lastImage.split(' ').shift();
+  const imageURL = lastImage.split(' ').shift().replace('900x900/', '');
 
   return imageURL;
 }
@@ -41,7 +41,7 @@ function getYoutubeImage() {
 
 function getBandcampImage() {
   const albumArt = document.querySelector('#tralbumArt .popupImage img');
-  const imageURL = albumArt.src.replace('900x900/', '').replace('_16.jpg', '_0.jpg');
+  const imageURL = albumArt.src.replace('_16.jpg', '_0.jpg');
 
   return imageURL;
 }
