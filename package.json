@@ -1,31 +1,27 @@
 {
   "name": "get-cover-bookmarklet",
-  "version": "0.0.0",
   "private": true,
-  "description": "Bookmarklet to grab cover images from Instagram, SoundCloud, Mixcloud and YouTube",
-  "scripts": {
-    "build": "node ./bin/build.mjs",
-    "dev": "npm run start",
-    "prepare": "husky install",
-    "start": "chokidar \"src/*\" -c \"npm run build\"",
-    "test": "eslint"
-  },
-  "keywords": [],
   "author": "Jan T. Sott",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "prepare": "lefthook install",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
-    "ejs": "^3.1.8",
-    "html-minifier-terser": "^7.1.0",
-    "terser": "^5.16.1"
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.5",
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
-    "chokidar-cli": "^3.0.0",
-    "eslint": "^8.31.0",
-    "eslint-plugin-json": "^3.1.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0"
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "@biomejs/biome": "^2.2.3",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "lefthook": "^1.12.3",
+    "typescript": "^5.0.0",
+    "vite-plugin-bookmarklet": "^0.3.1"
   }
 }
