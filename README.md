@@ -2,7 +2,7 @@
 
 > Bookmarklet to grab cover images from Instagram, Bandcamp, SoundCloud, Mixcloud and YouTube
 
-[![License](https://img.shields.io/github/license/idleberg/get-cover-bookmarklet?color=blue&style=for-the-badge)](https://github.com/idleberg/get-cover-bookmarklet/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/idleberg/get-cover-bookmarklet?color=blue&style=for-the-badge)](https://github.com/idleberg/get-cover-bookmarklet/blob/gh-pages/LICENSE)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/idleberg/get-cover-bookmarklet/gh-pages.yml?style=for-the-badge)
 
 ## tl;dr
