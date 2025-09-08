@@ -23,9 +23,8 @@ function getMixcloudImage() {
 }
 
 function getInstagramImage() {
-	const albumArt = document.querySelector('[style^="padding-bottom"] img');
-	const lastImage = albumArt.srcset.split(',').pop();
-	const imageURL = lastImage.split(' ').shift();
+	const albumArt = document.querySelector('section main img[style="object-fit: cover;"]');
+	const imageURL = albumArt.src;
 
 	return imageURL;
 }
