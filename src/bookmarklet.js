@@ -15,9 +15,9 @@ function getSoundcloudImage() {
 }
 
 function getMixcloudImage() {
-	const albumArt = document.querySelector('.album-art img');
-	const lastImage = albumArt.srcset.split(',').pop();
-	const imageURL = lastImage.split(' ').shift().replace('900x900/', '');
+	const albumArt = document.querySelector('[data-testid="playerHero"] img[class*="styles__ImageElement-css-in-js"]');
+	const lastImage = albumArt.srcset.split(',').find((img) => img.includes('870x870'));
+	const imageURL = lastImage.split(' ').at(0);
 
 	return imageURL;
 }
