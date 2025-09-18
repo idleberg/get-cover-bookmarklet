@@ -1,27 +1,26 @@
 {
-  "name": "get-cover-bookmarklet",
-  "private": true,
-  "author": "Jan T. Sott",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "astro dev --open",
-    "build": "astro build",
-    "prepare": "lefthook install",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.5",
-    "tailwindcss": "^4.1.13"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.3",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "lefthook": "^1.12.3",
-    "typescript": "^5.0.0",
-    "vite-plugin-bookmarklet": "^0.3.1"
-  }
+	"name": "get-cover-bookmarklet",
+	"private": true,
+	"author": "Jan T. Sott",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"dev": "astro dev --open",
+		"build": "astro build",
+		"prepare": "lefthook install",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.13",
+		"astro": "^5.13.5",
+		"tailwindcss": "^4.1.13"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@idleberg/configs": "^0.3.1",
+		"typescript": "^5.0.0",
+		"vite-plugin-bookmarklet": "^0.3.1"
+	}
 }
